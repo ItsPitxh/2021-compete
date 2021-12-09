@@ -1,4 +1,5 @@
 <?php
+//preparing config for PHP files
 $host = "localhost";
 $user = "root";
 $configpass = "";
@@ -13,3 +14,5 @@ $date = date("Y-m-d H:i:s");
 if(!$conn){
     echo "Failed To Connecting To Datebase";
 }
+
+?>
