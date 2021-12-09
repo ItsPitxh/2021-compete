@@ -1,9 +1,9 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = "";
+$configpass = "";
 $db = "poly_db";
-$conn = mysqli_connect($host, $user, $pass, $db);
+$conn = mysqli_connect($host, $user, $configpass, $db);
 mysqli_select_db($conn, $db);
 mysqli_set_charset($conn, "utf8");
 
