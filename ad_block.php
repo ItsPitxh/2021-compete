@@ -25,14 +25,14 @@ include("ad_nav.php");
                   <th scope="col">ชื่อผู้ใช้</th>
                   <th scope="col">โปรไฟล์</th>
                   <th scope="col">สถานะ</th>
-                  <th scope="col">อนุญาติ</th>
+                  <!-- <th scope="col">อนุญาติ</th> -->
                   <th scope="col">ไม่อนุญาติ</th>
                 </tr>
                 
               </thead>
               <tbody>
                   <?php
-                    $sql = "SELECT * FROM user_tb WHERE user_status = 'pending'";
+                    $sql = "SELECT * FROM user_tb WHERE user_status = 'verified' or user_status = 'blocked'";
                     $query = mysqli_query($conn, $sql);
                     while($row = mysqli_fetch_array($query)) {
                       ?>
@@ -43,8 +43,22 @@ include("ad_nav.php");
                   <td><img src="img/<?=$row['user_img'];?>" alt="" width="20%"></td>
                   <td><?=$row['user_status'];?></td>
                   
-                  <td><a href="ad_accept_fn.php?user_id=<?=$row['user_id']?>" class="btn btn-success">อนุญาติ</a></td>
-                  <td><a href="ad_declined_fn.php?user_id=<?=$row['user_id']?>" class="btn btn-danger">ไม่อนุญาติ</a></td>
+                  <!-- <td><a href="ad_accept_fn.php?user_id=<?=$row['user_id']?>" class="btn btn-success">อนุญาติ</a></td> -->
+                <td>
+                    <?php 
+                    if($row['user_status'] == 'verified'){
+                    ?>
+                    <a href="ad_block_fn.php?user_id=<?=$row['user_id']?>" class="btn btn-danger">block</a>
+                    <?php 
+                        } else if($row['user_status'] == 'blocked') {
+
+                        
+                    ?>
+                    <a href="ad_unblock_fn.php?user_id=<?=$row['user_id']?>" class="btn btn-success">Unblock</a>
+                    <?php 
+                        }
+                    ?>
+                </td>
                 </tr>
                 <?php
                     }
