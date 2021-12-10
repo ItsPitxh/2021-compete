@@ -1,6 +1,5 @@
 <?php
-session_start();
-include('config.php');
+
 include("ad_nav.php");
 ?>
 <!DOCTYPE html>
@@ -31,11 +30,6 @@ include("ad_nav.php");
                 
               </thead>
               <tbody>
-                  <?php
-                    $sql = "SELECT * FROM user_tb WHERE user_status = 'pending'";
-                    $query = mysqli_query($conn, $sql);
-                    while($row = mysqli_fetch_array($query)) {
-                      ?>
                       <tr>
                   <td><?=$row['user_fname']; ?></td>
                   <td><?=$row['user_sname'];?></td>
@@ -43,14 +37,9 @@ include("ad_nav.php");
                   <td><img src="img/<?=$row['user_img'];?>" alt="" width="20%"></td>
                   <td><?=$row['user_status'];?></td>
                   
-                  <td><a href="ad_accept_fn.php?user_id=<?=$row['user_id']?>" class="btn btn-success">อนุญาติ</a></td>
-                  <td><a href="ad_declined_fn.php?user_id=<?=$row['user_id']?>" class="btn btn-danger">ไม่อนุญาติ</a></td>
+                  <td><a href="" class="btn btn-success">อนุญาติ</a></td>
+                  <td><a href="" class="btn btn-danger">ไม่อนุญาติ</a></td>
                 </tr>
-                <?php
-                    }
-                    
-                    
-                  ?>
                 
               </tbody>
             </table>

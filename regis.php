@@ -23,7 +23,7 @@
                         สมัครสมาชิกใหม่
                     </h4>
                     <hr>
-                    <form action="regis_ch.php" method="post" enctype="multipart/form-data">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <label>Name</label><br>
                             <input type="text" name="fname" id="fname" placeholder="ชื่อจริง" class="btn btn-outline-dark" required>
                             <input type="text" name="sname" id="sname" placeholder="นามสกุล" class="btn btn-outline-dark" required><br>

@@ -23,7 +23,7 @@
                         เข้าสู่ระบบ
                     </h4>
                     <hr>
-                    <form action="ad_login_fn.php" method="post">
+                    <form action="" method="post">
                         <label>ชื่อผู้ใช้</label>
                             <input type="text" name="username" placeholder="รหัสผู้ใช้" style="width: 100%;" class="btn btn-outline-dark mb-2" required>
                         <label>รหัสผ่าน</label>
