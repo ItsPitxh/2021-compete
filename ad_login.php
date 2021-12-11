@@ -25,9 +25,9 @@
                     <hr>
                     <form action="" method="post">
                         <label>ชื่อผู้ใช้</label>
-                            <input type="text" name="username" placeholder="รหัสผู้ใช้" style="width: 100%;" class="btn btn-outline-dark mb-2" required>
+                        <input type="text" name="username" placeholder="รหัสผู้ใช้" style="width: 100%;" class="btn btn-outline-dark mb-2" required>
                         <label>รหัสผ่าน</label>
-                            <input type="password" name="pass" placeholder="รหัสผ่านของผู้ใช้" style="width: 100%;" class="btn btn-outline-dark" required>
+                        <input type="password" name="pass" placeholder="รหัสผ่านของผู้ใช้" style="width: 100%;" class="btn btn-outline-dark" required>
                         <hr>
                         <div class="mb-2">
                             <div class="text-center">
