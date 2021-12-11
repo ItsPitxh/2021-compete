@@ -13,7 +13,7 @@
     <div class="fixed-top">
         <nav class="navbar navbar-light bg-white">
             <a href="">#</a>
-            <a href="" class="btn btn-danger">Logout</a>
+            <a href="logout_fn.php" class="btn btn-danger">Logout</a>
         </nav>
     </div>
     

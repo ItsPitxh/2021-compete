@@ -27,15 +27,14 @@ include("ad_nav.php");
             <th scope="col">ชื่อผู้ใช้</th>
             <th scope="col">โปรไฟล์</th>
             <th scope="col">สถานะ</th>
-            <th scope="col">อนุญาติ</th>
-            <th scope="col">ไม่อนุญาติ</th>
+            <th scope="col">ดูโปรไฟล์</th>
           </tr>
 
         </thead>
         <tbody>
           <?php
             
-            $sql = "SELECT * FROM user_tb WHERE user_status = 'pending'";
+            $sql = "SELECT * FROM user_tb WHERE user_status = 'blocked' OR user_status ='verified' OR user_status = 'pending'";
             $query = mysqli_query($conn, $sql);
 
             while($row = mysqli_fetch_array($query)) {
@@ -49,8 +48,9 @@ include("ad_nav.php");
             <td><?=$row['user_username'];?></td>
             <td><img src="img/<?=$row['user_img'];?> " width="20%"></td>
             <td><?=$row['user_status'];?></td>
-            <td><a href="ad_accept_fn.php?user_id=<?=$row['user_id'];?>" class="btn btn-success">อนุญาติ</a></td>
-            <td><a href="ad_declined_fn.php?user_id=<?=$row['user_id'];?>" class="btn btn-danger">ไม่อนุญาติ</a></td>
+
+            <td><a href="ad_blocked_fn.php?user_id=<?=$row['user_id'];?>" class="btn btn-danger">View</a></td>
+
           </tr>
           <?php } ?>
 

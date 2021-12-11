@@ -22,10 +22,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="accept">Accept</a>
+                        <a class="nav-link" href="ad_accept.php" id="accept">Accept</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="ee">#</a>
+                        <a class="nav-link" href="ad_blocked.php" id="ee">block</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="cc">#</a>
@@ -35,16 +35,16 @@
                     </li>
                 </ul>
             </div>
-            <a href="" id="logout" class="btn btn-danger">Logout</a>
+            <a href="logout_fn.php" id="logout" class="btn btn-danger">Logout</a>
         </nav>
     </div>
 
     <div class="sidenav">
-        <a href="#">Accept</a>
+        <a href="ad_accept.php">Accept</a>
         <hr color="grey">
-        <a href="#">#</a>
+        <a href="ad_blocked.php">Block</a>
         <hr color="grey">
-        <a href="#">#</a>
+        <a href="ad_report.php">Report</a>
         <hr color="grey">
     </div>
 

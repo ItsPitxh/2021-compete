@@ -23,7 +23,7 @@
                         เข้าสู่ระบบ
                     </h4>
                     <hr>
-                    <form action="" method="post">
+                    <form action="user_login_fn.php" method="post">
                         <label>ชื่อผู้ใช้</label>
                             <input type="text" name="username" placeholder="รหัสผู้ใช้" style="width: 100%;" class="btn btn-outline-dark mb-2" required>
                         <label>รหัสผ่าน</label>
@@ -35,6 +35,7 @@
                                     เข้าสู่ระบบ
                                 </button>
                                 <a href="regis.php" class="btn btn-danger nahee">สมัครสมาชิก</a>
+                                <a href="ad_login.php" class="btn btn-secondary nahee">Admin</a>
                             </div>
                         </div>
                     </form>
